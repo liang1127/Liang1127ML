@@ -82,7 +82,7 @@ class MLPlay:
                 
             if not self.ball_served:
                 self.ball_served = True
-                return "SERVE_TO_LEFT"
+                return "SERVE_TO_RIGHT"
             else:
                 BallCoordinate_Now = scene_info["ball"]
                 ball_speed = scene_info["ball_speed"]
