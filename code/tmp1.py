@@ -7,6 +7,8 @@ import random
 """
 The template of the script for the machine learning process in game pingpong
 """
+filename = os.path.abspath('final_KNNP1.sav')
+model = pickle.load(open(filename, 'rb'))
 
 class MLPlay:
     def __init__(self, side):
@@ -75,8 +77,7 @@ class MLPlay:
         #            return "NONE" 
 
         if Mode == "KNN":
-            filename = os.path.abspath('final_KNNP1.sav')
-            model = pickle.load(open(filename, 'rb'))
+            
             if scene_info["status"] != "GAME_ALIVE":
                 return "RESET"
                 
